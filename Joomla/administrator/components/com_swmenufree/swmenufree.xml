@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+    <name>swMenuFree</name>
+    <version>6.1</version>
+    <creationDate>06/09/2010</creationDate>
+    <author>Sean White</author>
+    <authorEmail>sean@swmenupro.com</authorEmail>
+    <authorUrl>http://www.swmenupro.com</authorUrl>
+    <copyright>This Component is Proprietry Software</copyright>
+    <license></license>
+    <description>Joomla 1.5 DHTML Menu Component</description>
+
+	 <installfile>install.swmenufree.php</installfile>
+    <uninstallfile>uninstall.swmenufree.php</uninstallfile>
+
+
+   
+    <install>
+	 	<sql>DROP TABLE IF EXISTS `#__swmenufree_config`</sql>
+            <sql>CREATE TABLE `#__swmenufree_config` (
+  `id` int(11) NOT NULL default '0',
+  `main_top` smallint(8) default '0',
+  `main_left` smallint(8) default '0',
+  `main_height` smallint(8) default '20',
+  `sub_border_over` varchar(30) default '0',
+  `main_width` smallint(8) default '100',
+  `sub_width` smallint(8) default '100',
+  `main_back` varchar(7) default '#4682B4',
+  `main_over` varchar(7) default '#5AA7E5',
+  `sub_back` varchar(7) default '#4682B4',
+  `sub_over` varchar(7) default '#5AA7E5',
+  `sub_border` varchar(30) default '#FFFFFF',
+  `main_font_size` smallint(8) default '0',
+  `sub_font_size` smallint(8) default '0',
+  `main_border_over` varchar(30) default '0',
+  `sub_font_color` varchar(7) default '#000000',
+  `main_border` varchar(30) default '#FFFFFF',
+  `main_font_color` varchar(7) default '#000000',
+  `sub_font_color_over` varchar(7) default '#FFFFFF',
+  `main_font_color_over` varchar(7) default '#FFFFFF',
+  `main_align` varchar(8) default 'left',
+  `sub_align` varchar(8) default 'left',
+  `sub_height` smallint(7) default '20',
+  `position` varchar(10) default 'absolute',
+  `orientation` varchar(20) default NULL,
+  `font_family` varchar(50) default 'Arial',
+  `font_weight` varchar(10) default 'normal',
+  `font_weight_over` varchar(10) default 'normal',
+  `level2_sub_top` int(11) default '0',
+  `level2_sub_left` int(11) default '0',
+  `level1_sub_top` int(11) NOT NULL default '0',
+  `level1_sub_left` int(11) NOT NULL default '0',
+  `main_back_image` varchar(100) default NULL,
+  `main_back_image_over` varchar(100) default NULL,
+  `sub_back_image` varchar(100) default NULL,
+  `sub_back_image_over` varchar(100) default NULL,
+  `specialA` varchar(50) default '80',
+  `main_padding` varchar(40) default '0px 0px 0px 0px',
+  `sub_padding` varchar(40) default '0px 0px 0px 0px',
+  `specialB` varchar(100) default '50',
+  `sub_font_family` varchar(50) default 'Arial',
+  `extra` mediumtext,
+  PRIMARY KEY  (`id`)
+)</sql>
+      
+    </install>
+    <uninstall>
+       
+            <sql>DROP TABLE `#__swmenufree_config`</sql>
+          
+       
+    </uninstall>
+    
+	   <administration>
+	  <menu >swMenuFree</menu>
+
+
+
+	  
+ <files folder="admin">
+			<filename>admin.swmenufree.class.php</filename>
+            <filename>admin.swmenufree.html.php</filename>
+            <filename>admin.swmenufree.php</filename>
+			<filename>preview.php</filename>
+			<filename>menu_systems.php</filename>
+            <filename>readme.txt</filename>
+           
+            <filename>toolbar.swmenufree.html.php</filename>
+            <filename>toolbar.swmenufree.php</filename>
+            <filename>uninstall.swmenufree.php</filename>
+			<filename>install.swmenufree.php</filename>
+            
+			<filename>ImageManager/IMEStandalone.js</filename>
+            <filename>ImageManager/README.txt</filename>
+			<filename>ImageManager/config.inc.php</filename>
+            <filename>ImageManager/editor.php</filename>
+            <filename>ImageManager/editorFrame.php</filename>
+            <filename>ImageManager/images.php</filename>
+			 <filename>ImageManager/manager.php</filename>
+            <filename>ImageManager/newFolder.html</filename>
+            <filename>ImageManager/standalone.html</filename>
+            <filename>ImageManager/thumbs.php</filename>
+			
+			<filename>ImageManager/Classes/Files.php</filename>
+            <filename>ImageManager/Classes/GD.php</filename>
+            <filename>ImageManager/Classes/IM.php</filename>
+            <filename>ImageManager/Classes/ImageEditor.php</filename>
+            <filename>ImageManager/Classes/ImageManager.php</filename>
+            <filename>ImageManager/Classes/NetPBM.php</filename>
+            <filename>ImageManager/Classes/Thumbnail.php</filename>
+            <filename>ImageManager/Classes/Transform.php</filename>
+            <filename>ImageManager/Classes/package.xml</filename>
+           
+            <filename>ImageManager/assets/EditorContent.js</filename>
+            <filename>ImageManager/assets/ImageEditor.css</filename>
+            <filename>ImageManager/assets/dialog.js</filename>
+            <filename>ImageManager/assets/editor.css</filename>
+            <filename>ImageManager/assets/editor.js</filename>
+            <filename>ImageManager/assets/editorFrame.css</filename>
+            <filename>ImageManager/assets/editorFrame.js</filename>
+            <filename>ImageManager/assets/hover.htc</filename>
+            <filename>ImageManager/assets/imagelist.css</filename>
+            <filename>ImageManager/assets/images.js</filename>
+            <filename>ImageManager/assets/manager.css</filename>
+            <filename>ImageManager/assets/manager.js</filename>
+            <filename>ImageManager/assets/popup.js</filename>
+            <filename>ImageManager/assets/slider.js</filename>
+            <filename>ImageManager/assets/wz_jsgraphics.js</filename>
+          
+            <filename>ImageManager/img/2x2.gif</filename>
+            <filename>ImageManager/img/2x2_w.gif</filename>
+            <filename>ImageManager/img/btnFolderNew.gif</filename>
+            <filename>ImageManager/img/btnFolderUp.gif</filename>
+            <filename>ImageManager/img/btn_cancel.gif</filename>
+            <filename>ImageManager/img/btn_ok.gif</filename>
+            <filename>ImageManager/img/crop.gif</filename>
+            <filename>ImageManager/img/default.gif</filename>
+            <filename>ImageManager/img/div.gif</filename>
+            <filename>ImageManager/img/dots.gif</filename>
+            <filename>ImageManager/img/edit_active.gif</filename>
+            <filename>ImageManager/img/edit_pencil.gif</filename>
+            <filename>ImageManager/img/edit_trash.gif</filename>
+            <filename>ImageManager/img/folder.gif</filename>
+            <filename>ImageManager/img/hand.gif</filename>
+            <filename>ImageManager/img/islocked2.gif</filename>
+            <filename>ImageManager/img/locked.gif</filename>
+            <filename>ImageManager/img/measure.gif</filename>
+            <filename>ImageManager/img/noimages.gif</filename>
+            <filename>ImageManager/img/rotate.gif</filename>
+            <filename>ImageManager/img/save.gif</filename>
+            <filename>ImageManager/img/scale.gif</filename>
+            <filename>ImageManager/img/spacer.gif</filename>
+            <filename>ImageManager/img/t_black.gif</filename>
+            <filename>ImageManager/img/t_white.gif</filename>
+            <filename>ImageManager/img/unlocked.gif</filename>
+            <filename>ImageManager/img/unlocked2.gif</filename>
+            
+			<filename>ImageManager/lang/en.js</filename>
+                     
+            <filename>css/swmenufree.css</filename>
+           
+			<filename>images/blank.png</filename>
+            <filename>images/blue-tab.png</filename>
+            
+            <filename>images/colors_top.png</filename>
+            <filename>images/colorwheel.jpg</filename>
+            <filename>images/comparison.png</filename>
+            <filename>images/font_top.png</filename>
+            <filename>images/info.png</filename>
+            <filename>images/menu_padding2.png</filename>
+            <filename>images/mygosu_border.png</filename>
+            <filename>images/sel.gif</filename>
+            <filename>images/started_top.png</filename>
+            <filename>images/swmenufree_logo.png</filename>
+            <filename>images/swmenufree_footer.png</filename>
+            <filename>images/trans_offsets.png</filename>
+            <filename>images/white-tab.png</filename>
+			<filename>images/cd_cover.png</filename>
+           
+            <filename>js/dhtml.js</filename>
+            <filename>js/swmenufree.js</filename>
+            <filename>js/wz_tooltip.js</filename>
+            
+			<filename>language/english.php</filename>
+			<filename>language/danish.php</filename>
+			<filename>language/spanish.php</filename>
+			<filename>language/brazilian.php</filename>
+			<filename>language/dutch.php</filename>
+			<filename>language/french.php</filename>
+			<filename>language/hungarian.php</filename>
+			<filename>language/hrvatski.php</filename>
+			<filename>language/turkish.php</filename>
+			<filename>language/portugues.php</filename>
+			<filename>language/russian.php</filename>
+			<filename>language/default.ini</filename>
+            
+			<filename>modules/mod_swmenufree/mod_swmenufree.php</filename>
+            <filename>modules/mod_swmenufree/mod_swmenufree.sw</filename>
+
+            <filename>modules/mod_swmenufree/DropDownMenuX.js</filename>
+            <filename>modules/mod_swmenufree/DropDownMenuX_Packed.js</filename>
+            <filename>modules/mod_swmenufree/functions.php</filename>
+            <filename>modules/mod_swmenufree/ie5.js</filename>
+			<filename>modules/mod_swmenufree/styles.php</filename>
+			<filename>modules/mod_swmenufree/transmenu.js</filename>
+            <filename>modules/mod_swmenufree/transmenu_Packed.js</filename>
+			<filename>modules/mod_swmenufree/menu.js</filename>
+            <filename>modules/mod_swmenufree/menu_Packed.js</filename>
+			<filename>modules/mod_swmenufree/jquery-1.2.6.pack.js</filename>
+			<filename>modules/mod_swmenufree/superfish.js</filename>
+            <filename>modules/mod_swmenufree/supersubs.js</filename>
+			<filename>modules/mod_swmenufree/hoverIntent.js</filename>
+  
+			<filename>modules/mod_swmenufree/images/blank.png</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/.grey-40.png</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/.white-90.png</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/grey-40.png</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/submenu-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/submenu-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/submenuleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/submenuleft-on.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/white-90.png</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/x.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/black-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/black-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/blackleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/blackleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/blue-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/blue-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/blueleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/blueleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/green-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/green-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/greenleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/greenleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/grey-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/grey-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/greyleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/greyleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/red-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/red-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/redleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/redleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/white-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/white-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/whiteleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/whiteleft-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/yellow-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/yellow-on.gif</filename>
+			<filename>modules/mod_swmenufree/images/transmenu/yellowleft-off.gif</filename>
+            <filename>modules/mod_swmenufree/images/transmenu/yellowleft-on.gif</filename>
+
+			<filename>modules/mod_swmenufree/images/superfish/arrows-black.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-blue.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-green.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-grey.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-red.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-white.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/arrows-yellow.png</filename>
+			<filename>modules/mod_swmenufree/images/superfish/shadow.png</filename>
+            
+            <filename>modules/mod_swmenufree/styles/menu.txt</filename>
+            <filename>modules/mod_swmenufree/cache/cache.txt</filename>
+          
+       </files>
+      
+
+       
+       
+    </administration>
+
+</install>

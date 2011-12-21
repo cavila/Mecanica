@@ -1,0 +1,192 @@
+.sw-sf, .sw-sf * {
+margin: 0 !important ; 
+padding: 0 !important ; 
+list-style: none !important ; 
+}
+.sw-sf {
+line-height: 1.0 !important ; 
+}
+.sw-sf hr {display: block; clear: left; margin: -0.66em 0; visibility: hidden;}
+.sw-sf ul{
+position: absolute; 
+top: -999em; 
+width: 10em; 
+display: block; 
+}
+.sw-sf ul li {
+width: 100% !important ; 
+}
+.sw-sf li:hover {
+z-index:300 ; 
+}
+.sw-sf li:hover {
+visibility: inherit ; 
+}
+.sw-sf li {
+float: left; 
+position: relative; 
+}
+.sw-sf li li{
+ top: 0 !important ; 
+ left: 0; 
+position: relative; 
+}
+.sw-sf a {
+display: block; 
+position: relative; 
+}
+.sw-sf li:hover ul ,
+.sw-sf li.sfHover ul {
+left: 0; 
+top: 2.5em; 
+z-index: 400; 
+width:100%; 
+}
+ul.sw-sf li:hover li ul ,
+ul.sw-sf li.sfHover li ul {
+top: -999em; 
+}
+ul.sw-sf li li:hover ul ,
+ul.sw-sf li li.sfHover ul {
+left: 10em; 
+top: 0; 
+}
+ul.sw-sf li li:hover li ul ,
+ul.sw-sf li li.sfHover li ul {
+top: -999em; 
+}
+ul.sw-sf li li li:hover ul ,
+ul.sw-sf li li li.sfHover ul {
+left: 10em; 
+top: 0; 
+}
+#sfmenu {
+position: relative; 
+border: 0px none #FFFFFF !important ; 
+top: 0px !important ; 
+left: 0px; 
+}
+#sf-section {
+border: 0px none #FFFFFF !important ; 
+}
+.sw-sf li.sfHover li , .sw-sf li:hover li {
+top:0px !important ; 
+left:0px !important ; 
+}
+.sw-sf li.sfHover li.sfHover li {
+top:0px !important; 
+left:0px !important; 
+}
+.sw-sf a.item1 {
+ padding: 7px 15px 7px 10px !important ; 
+ font-size: 12px !important ; 
+ font-family: Verdana, Arial, Helvetica, sans-serif !important ; 
+ text-align: left !important ; 
+ font-weight: normal !important ; 
+ color: #FFFFFF !important ; 
+ text-decoration: none !important ; 
+ border-top: 1px solid #FFFFFF !important ; 
+ border-left: 1px solid #FFFFFF !important ; 
+ border-bottom: 1px solid #FFFFFF !important;
+ border-right: 0 !important ; 
+ display: block; 
+ white-space: nowrap; 
+ position: relative; 
+ background-color: #135CAE !important ; 
+}
+.sw-sf a.item1.last {
+ border-right: 1px solid #FFFFFF !important;
+}
+.sw-sf .current a.item1,
+.sw-sf li.sfHover a.item1,
+.sw-sf a:focus,
+.sw-sf a:hover ,
+.sw-sf a:active {
+ color: #FFFF85 !important ; 
+ background-color: #0DB3D3 !important ; 
+}
+.sw-sf  a.item2 {
+ padding: 7px 5px 8px 5px !important ; 
+ font-size: 12px !important ; 
+ font-family: Verdana, Arial, Helvetica, sans-serif !important ; 
+ text-align: left !important ; 
+ font-weight: normal !important ; 
+ text-decoration: none !important ; 
+ background-color: #135CAE !important ; 
+ color: #FFFF85 !important ; 
+ display: block; 
+ white-space: nowrap; 
+ position: relative; 
+ border-top: 0px none #FFFFFF !important ; 
+ border-left: 0px none #FFFFFF !important ; 
+ border-right: 0px none #FFFFFF !important ; 
+ opacity:0.9; 
+ filter:alpha(opacity=90) 
+}
+.sw-sf a.item2.last {
+ border-bottom: 0px none #FFFFFF !important ; 
+}
+.sw-sf li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a.item2,
+.sw-sf li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover li.sfHover li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover li.sfHover li.sfHover li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a.item2:hover,
+.sw-sf li.sfHover  li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a.item2:hover,
+.sw-sf  a.item2:hover {
+ background-image:none ;
+ background-color: #0DB3D3 !important ; 
+ color: #FFFFFF !important ; 
+}
+.sw-sf li.sfHover li.sfHover li a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li a.item2,
+.sw-sf li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li a.item2{
+ background-image:none ;
+ background-color: #135CAE !important ; 
+ color: #FFFF85 !important ; 
+}
+.sw-sf a.sf-with-ul{
+padding-right:2.25em;
+min-width:1px; 
+}
+.sw-sf .sf-sub-indicator{
+position: absolute;
+display: block; 
+right: .75em; 
+top: 1.05em; 
+width: 10px; 
+height: 10px; 
+text-indent: -999em; 
+overflow:hidden; 
+background:	url('http://localhost/proyectos_gitgci/Joomla/modules/mod_swmenufree/images/superfish/arrows-white.png') no-repeat -10px -100px; 
+}
+.sw-sf a > .sf-sub-indicator{
+top: .8em;
+background-position: 0 -100px; 
+}
+.sw-sf a:focus > .sf-sub-indicator,
+.sw-sf a:hover > .sf-sub-indicator,
+.sw-sf a:active > .sf-sub-indicator,
+.sw-sf li:hover > a > .sf-sub-indicator,
+.sw-sf li.sfHover > a > .sf-sub-indicator{
+top: .8em;
+background-position: -10px -100px; 
+}
+.sw-sf ul .sf-sub-indicator{ background-position: -10px 0;}
+.sw-sf ul a > .sf-sub-indicator{ background-position: 0 0;}
+.sw-sf ul a:focus > .sf-sub-indicator,
+.sw-sf ul a:hover > .sf-sub-indicator,
+.sw-sf ul a:active > .sf-sub-indicator,
+.sw-sf ul li:hover > a > .sf-sub-indicator,
+.sw-sf ul li.sfHover > a > .sf-sub-indicator{
+background-position: -10px 0; 
+}

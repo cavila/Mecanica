@@ -103,4 +103,10 @@
 	clip: rect(auto auto auto 402px);
 }
 /* end Button */
-
+#sfmenu {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none #FFFFFF !important;
+    left: 0;
+    position: relative;
+    top: 0 !important;
+}

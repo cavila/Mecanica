@@ -1,0 +1,2 @@
+Cache file for menu module will go in this folder.
+menu.cache

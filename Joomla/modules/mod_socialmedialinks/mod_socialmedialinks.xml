@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+	<name>Social Media Links</name>
+	<author>Viper Web Solutions</author>
+	<authorEmail>Dallas@viperwebistes.com</authorEmail>
+	<authorUrl>www.viperwebsites.com</authorUrl>
+	<creationDate>December 12, 2010</creationDate>
+	<copyright>Copyright (c) 2008-2010 Viper Web Solutions. Icons provided by http://jwloh.deviantart.com/ - jwloh01@gmail.com</copyright>
+	<license>GNU GPL</license>
+	<version>1.6</version>
+	<description><![CDATA[<h1>Social Media Icon Links Extension (S.M.I.L.E.) v1.6</h1>This module displays Web 2.0 style icons that link to your social media profiles. To get started go to the module parameters and choose the icon size you want, then add the URLs of your social media profiles. Any icon/URL fields left empty simply won't be displayed. Be sure to include http:// in all URLs. For support contact us at support@viperwebsites.com ]]> </description> 
+
+	<files>
+		<filename module="mod_socialmedialinks">mod_socialmedialinks.php</filename>
+		<filename>index.html</filename>
+		<filename>style.css</filename>
+        <folder>icons/</folder>
+    </files>
+	<params>
+	     <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		 
+		 <param name="theme" type="folderlist" default="default" label="Choose Theme" directory="modules/mod_socialmedialinks/icons" description="This module supports multiple icon themes. You can download additional icon theme packs at www.viperwebsites.com" filter="" exclude="" stripext="" />
+
+		
+		<param name="size" type="list" default="size3" label="Choose Icon Size" description="Choose the size of your icons. 1 = smallest &amp; 5 = Largest">
+  				<option value="size1">Very Small</option>
+  				<option value="size2">Small</option>
+				<option value="size3">Medium</option>
+  				<option value="size4">Large</option>
+				<option value="size5">Very Large</option>
+  				
+		</param>
+
+		
+		<param name="align" type="radio" default="center" label="Align Icons" description="Choose to align the icons to the left or to the right. Only use center if you are using one icon">
+				<option value="left">Left</option>
+				<option value="center">Center</option>
+				<option value="right">Right</option>
+		</param>
+		
+		<param name="margin" type="text" default="3px" label="Space Between Icons" description="Add the space in px to display between the icons"/>
+		
+		
+		<param name="text" type="text" default="Follow us on" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<param name="rsstext" type="text" default="RSS Feed" label="Hover Text for RSS Icon" description="If you are using the RSS Icon, add the text to display when you mouseover the icon. ex: 'Subscribe to our Feed' (This module does not generate a feed, it only provides an RSS icon to link to your feed)"/>
+		
+		
+		<param name="target" type="radio" default="_blank" label="Target" description="Choose to open the link in a new browser window or the same window">
+				<option value="_blank">New Window</option>
+				<option value="_self">Same Window</option>
+		</param>
+	
+		<param name="robots" type="radio" default="1" label="Include the rel='nofollow' link attribute" description="Search Engines that support the rel='nofollow' attribute exclude these links from their ranking calculation ">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+		</param>
+		
+		<param name="credits" type="radio" default="1" label="Show a friendly link?" description="This option allows you to show/hide a link back to our website.">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="Social Media Icons" description="" />
+		<param name="ic1" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url1" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic2" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url2" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic3" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url3" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic4" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url4" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic5" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url5" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic6" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url6" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic7" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url7" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic8" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url8" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic9" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url9" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic10" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url10" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+				<param name="ic11" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url11" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic12" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url12" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic13" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url13" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic14" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url14" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic15" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url15" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic16" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url16" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic17" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url17" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic18" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url18" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic19" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url19" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic20" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url20" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+				<param name="ic21" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url21" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic22" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url22" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic23" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url23" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic24" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url24" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic25" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url25" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic26" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url26" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic27" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url27" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic28" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url28" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic29" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url29" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="ic30" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_socialmedialinks/icons/default/size3/" striptext="" />
+		<param name="url30" type="text" default="" label="URL" description="Type the full URL including http://"/>
+		
+		</params>
+</install>

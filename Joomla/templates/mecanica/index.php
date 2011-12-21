@@ -20,8 +20,9 @@ artxComponentWrapper($document);
   <!--[if IE 6]><link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.ie6.css" type="text/css" media="screen" /><![endif]-->
   <!--[if IE 7]><link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.ie7.css" type="text/css" media="screen" /><![endif]-->
   <script type="text/javascript" src="<?php echo $templateUrl; ?>/script.js"></script>
+  <script type="text/javascript" src="<?php echo $templateUrl; ?>/jquery.js"></script>
  </head>
-<body>
+<body onload='redimensionar()'>
 <div id="art-page-background-simple-gradient">
 </div>
 <div id="art-main">
@@ -37,9 +38,10 @@ artxComponentWrapper($document);
 
 
 </div>
+
 <jdoc:include type="modules" name="user3" />
 <jdoc:include type="modules" name="banner1" style="artstyle" artstyle="art-nostyle" />
-<?php echo artxPositions($document, array('top1', 'top2', 'top3'), 'art-block'); ?>
+<?php echo artxPositions($document, array('top1', 'top2', 'top3') ); ?>
 <div class="art-contentLayout">
 <div class="art-<?php echo artxCountModules($document, 'right') ? 'content' : 'content-wide'; ?>">
 
@@ -73,7 +75,7 @@ artxComponentWrapper($document);
 <?php echo artxModules($document, 'banner5', 'art-nostyle'); ?>
 </div>
 <?php if (artxCountModules($document, 'right')) : ?>
-<div class="art-sidebar1"><?php echo artxModules($document, 'right', 'art-block'); ?>
+<div class="art-sidebar1"><?php echo artxModules($document, 'right'); ?>
 </div>
 <?php endif; ?>
 
@@ -105,5 +107,10 @@ All Rights Reserved.</p>
 <p class="art-page-footer"><a href="http://www.artisteer.com/?p=joomla_templates">Joomla template</a> created with Artisteer.</p>
 </div>
 
-</body> 
+</body>
+ <script type="text/javascript">
+	var alturaDiv1 = $("div.art-content").height();
+	$("div.art-sidebar1").height(alturaDiv1);
+
+</script>
 </html>

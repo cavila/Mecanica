@@ -416,9 +416,10 @@ font-weight: normal;
 /* begin Box, Block */
 .art-Block
 {
+	background: none repeat scroll 0 0 #000000;
 	position:relative;
 	z-index:0;
-	margin:0 auto;
+	margin:0;
 	min-width:15px;
 	min-height:15px;
 }
@@ -1205,7 +1206,7 @@ font-weight: normal;
 	z-index:0;
 	overflow:hidden;
 	width: 1000px;
-	margin: 5px auto 0px auto;
+	margin: 0px auto 0px auto;
 }
 
 .art-Footer .art-Footer-inner
@@ -1315,8 +1316,9 @@ text-decoration: none;
 	padding: 0;
 	border: 0;
 	float: left;
+	min-height: 400px;
 	overflow: hidden;
-	width: 799px;
+	width: 700px;
 }
 .art-contentLayout .art-content-wide
 {
@@ -1333,13 +1335,14 @@ text-decoration: none;
 /* begin LayoutCell */
 .art-contentLayout .art-sidebar1
 {
+    background: none repeat scroll 0 0 #1f1f1f;
 	position: relative;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	float: left;
 	overflow: hidden;
-	width: 199px;
+	width: 300px;
 }
 /* end LayoutCell */
 
@@ -2042,4 +2045,11 @@ font-family: Arial, Helvetica, Sans-Serif;
 .dm_taskbar ul li
 {
 	background-image: none;
+}
+#sfmenu {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none #FFFFFF !important;
+    left: 0;
+    position: relative;
+    top: 0 !important;
 }
