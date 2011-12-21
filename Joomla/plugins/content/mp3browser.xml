@@ -1,0 +1,103 @@
+<install type="plugin" version="1.5.0" group="content">
+    <name>mp3 Browser</name>
+    <version>1.5.18</version>
+    
+    <description>
+        <![CDATA[Plugin to create a formatted table of mp3's. <br/<br/>To use the plugin:<br/><br/>Place the tags {music}folderName/subfolder{/music} in any content item, <br/>the plugin will strip the tags and replace it with a table containing all the mp3's from that folder for playing or downloading. <br/><br/>For the file name the mp3's id3 tag of title-artist is used, if no title tag is present the file name is used. <br/><br/>Please remember to publish the plugin!! <br/><br/>Released Under the GNU/GPL<br/>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL <br/><br/>For more info and support <a href="http://www.dotcomdevelopment.com/forum/">http://www.dotcomdevelopment.com/forum</a>...]]>
+    </description>
+    
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Luke Collymore, Shami Willms, Jon Hollis</author>
+    <authoremail>jon@dotcomdevelopment.com</authoremail>
+    <authorurl>http://www.dotcomdevelopment.com</authorurl>
+    <copyright>Copyright (C) 2010 Dotcomdevelopment. All rights reserved.</copyright>
+    <creationDate>June-2010</creationDate>
+    
+    <files>
+        <filename plugin="mp3browser">mp3browser.php</filename>
+        <folder>mp3browser/</folder>
+    </files>
+
+    <params>
+        <param name="maxRows" type="text" size="12" 
+                default="20" label="Max rows" 
+                description="Enter the maximum number of rows per table, default=20" />
+         <param name="@spacer" type="spacer" default="" label="" description="" />
+         <param name="sortBy" type="radio" default="1" label="Sort Filenames" description="Sort by filename Ascending or Desending">
+ 			<option value="1">Ascending</option>
+ 			<option value="0">Descending</option>
+ 		</param>
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="tableWidth" type="text" size="5" 
+                default="" label="Table Width" 
+                description="Enter just the numeric value for the width of the table- do not include 'px'. Enter 0 for 100%" />
+        <param name="headerHeight" type="text" size="5" 
+                default="" label="Header Height" 
+                description="Enter the height for the table header- do not include 'px'." />
+        <param name="rowHeight" type="text" size="5" 
+                default="" label="Row Height" 
+                description="Enter just the numeric value for the height of the table rows- do not include 'px'." />
+        <param name="@spacer" type="spacer" default="" label="" description="" /> 
+        <param name="headerColor" type="text" size="12" 
+                default="#CCCCCC" label="Table Header Color" 
+                description="Enter the table header color - eg #CCCCCC" />
+        <param name="primaryRowColor" type="text" size="12" 
+                default="#FFFFFF" label="Primary Row Color" 
+                description="Enter the Primary row color - eg #FFFFFF" />
+        <param name="altRowColor" type="text" size="12" 
+                default="#D6E3EB" label="Alt Row Color" 
+                description="Enter the alt row color - eg #D6E3EB" />
+        <param name="bottomRowBorder" type="text" size="12" 
+                default="#C0C0C0" label="Row Bottom Border" 
+                description="Enter the row bottom border color - eg #C0C0C0" />
+
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+	    <param name="showDownload" type="radio" default="1" label="Show Download Column" description="Show Download Column">
+ 			<option value="1">On</option>
+ 			<option value="0">Off</option>
+ 		</param>
+        <param name="downloadText" type="text" size="12" 
+                default="Download" label="Download Header" 
+                description="Enter the text for the download column header" />
+        <param name="downloadColWidth" type="text" size="5" 
+                default="" label="Download Colum Width" 
+                description="Enter the numeric value for the width of the Download column- do not include 'px'." />
+
+        <param name="downloadImage" type="text" size="40" 
+                default="" label="Download Image" 
+                description="Enter the path and file for the download image eg 'images/stories/download.jpg'" />
+        <param name="downloadImageAlt" type="text" size="40" 
+                default="" label="Alternative Download Image" 
+                description="Enter the path and file for the alt download image eg 'images/stories/download-alt.jpg'" />
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+ 
+        <param name="nameText" type="text" size="12" 
+                default="Name" label="Name Header" 
+                description="Enter the text for the name column header" />
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="playText" type="text" size="12" 
+                default="Play" label="Play Header" 
+                description="Enter the text for the play column header" />
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="showSize" type="radio" default="1" label="Show Size Column" description="Show Size Column">
+ 			<option value="1">On</option>
+ 			<option value="0">Off</option>
+ 		</param>
+        <param name="sizeText" type="text" size="12" 
+                default="Size" label="Size Header" 
+                description="Enter the text for the size column header" />
+                
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="showLength" type="radio" default="1" label="Show Length Column" description="Show Length Column">
+ 			<option value="1">On</option>
+ 			<option value="0">Off</option>
+ 		</param>
+        <param name="lengthText" type="text" size="12" 
+                default="Length" label="Length Header" 
+                description="Enter the text for the length column header" />      
+        <param name="backlink" type="radio" default="1" label="Dotcom Development backlink" description="Dotcom Development backlink">
+ 			<option value="1">On</option>
+ 			<option value="0">Off</option>
+ 		</param>
+    </params>
+</install>
