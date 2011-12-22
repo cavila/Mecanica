@@ -88,7 +88,7 @@ function pluginMp3browser( &$row, &$params ) {
 			
 		//print table headers
 		$html .= '
-    		<table width="' . $tableWidth . '" cellspacing="0" cellpadding="0" border="0" class="mp3browser" style="text-align: left;">
+    		<table width="' . $tableWidth . '" cellspacing="0" cellpadding="0" border="0" class="mp3browser" style="text-align: left; margin-left: 10px;">
     		    <tr class="musictitles">';
 		
 		if( $showDownload ) {

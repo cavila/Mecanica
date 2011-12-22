@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>ITPFacebookActivityFeed</name>
+	<author>Todor Iliev</author>
+	<creationDate>April, 2010</creationDate>
+	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>1.1</version>
+	<description>MOD_ITPFBACTIVITY_DESC</description>
+	<files>
+		<filename module="mod_itpfbactivityfeed">mod_itpfbactivityfeed.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+
+	<params>
+        <param name="fbDomain" type="text" default="" size="100" label="MOD_ITPFBACTIVITY_DOMAIN" description="MOD_ITPFBACTIVITY_DOMAIN_DESC" />        
+        <param name="fbRendering" type="radio" default="1" label="MOD_ITPFBACTIVITY_RENDERING" description="MOD_ITPFBACTIVITY_RENDERING_DESC" >
+           <option value="0">iframe</option>
+           <option value="1">XFBML</option>
+        </param>
+        <param name="fbWidth" type="text" default="250" label="MOD_ITPFBACTIVITY_WIDTH" description="MOD_ITPFBACTIVITY_WIDTH_DESC" />
+        <param name="fbHeight" type="text" default="427" label="MOD_ITPFBACTIVITY_HEIGHT" description="MOD_ITPFBACTIVITY_HEIGHT_DESC" />
+        <param name="fbHeader" type="radio" default="1" label="MOD_ITPFBACTIVITY_HEADER" description="MOD_ITPFBACTIVITY_HEADER_DESC">
+            <option value="0">Hide</option>
+            <option value="1">Show</option>
+        </param>
+        <param name="fbColour" type="list" default="light" label="MOD_ITPFBACTIVITY_COLOUR" description="MOD_ITPFBACTIVITY_COLOUR_DESC">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </param>
+        <param name="fbFont" type="list" default="" label="MOD_ITPFBACTIVITY_FONT" description="MOD_ITPFBACTIVITY_FONT_DESC">
+            <option value=""></option>
+            <option value="arial">arial</option>
+            <option value="lucida grande">lucida grande</option>
+            <option value="segoe ui">segoe ui</option>
+            <option value="tahoma">tahoma</option>
+            <option value="trebuchet ms">trebuchet ms</option>
+            <option value="verdana">verdana</option>
+        </param>
+        <param name="fbBorderColour" type="text" default="" label="MOD_ITPFBACTIVITY_BORDER_COLOUR" description="MOD_ITPFBACTIVITY_BORDER_COLOUR_DESC" />
+        <param name="fbRecommendation" type="radio" default="0" label="MOD_ITPFBACTIVITY_REC" description="MOD_ITPFBACTIVITY_REC_DESC">
+            <option value="0">Hide</option>
+            <option value="1">Show</option>
+        </param>
+        <param name="fbRef" type="radio" default="0" label="MOD_ITPFBACTIVITY_REF" description="MOD_ITPFBACTIVITY_REF_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </param>
+        <param name="fbDynamicLocale" type="radio" default="0" label="MOD_ITPFBACTIVITY_DYN_LOCALE" description="MOD_ITPFBACTIVITY_DYN_LOCALE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </param>
+        <param name="fbLocale" type="list" default="en_US" label="MOD_ITPFBACTIVITY_LANGUAGE" description="MOD_ITPFBACTIVITY_LANGUAGE_DESC">
+            <option value="af_ZA">MOD_ITPFBACTIVITY_AF_ZA</option>
+            <option value="ar_AR">MOD_ITPFBACTIVITY_AR_AR</option>
+            <option value="ay_BO">MOD_ITPFBACTIVITY_AY_BO</option>
+            <option value="az_AZ">MOD_ITPFBACTIVITY_AZ_AZ</option>
+            <option value="be_BY">MOD_ITPFBACTIVITY_BE_BY</option>
+            <option value="bg_BG">MOD_ITPFBACTIVITY_BG_BG</option>
+            <option value="bn_IN">MOD_ITPFBACTIVITY_BN_IN</option>
+            <option value="bs_BA">MOD_ITPFBACTIVITY_BS_BA</option>
+            <option value="ca_ES">MOD_ITPFBACTIVITY_CA_ES</option>
+            <option value="ck_US">MOD_ITPFBACTIVITY_CK_US</option>
+            <option value="cs_CZ">MOD_ITPFBACTIVITY_CS_CZ</option>
+            <option value="cy_GB">MOD_ITPFBACTIVITY_CY_GB</option>
+            <option value="da_DK">MOD_ITPFBACTIVITY_DA_DK</option>
+            <option value="de_DE">MOD_ITPFBACTIVITY_DE_DE</option>
+            <option value="el_GR">MOD_ITPFBACTIVITY_EL_GR</option>
+            <option value="en_GB">MOD_ITPFBACTIVITY_EN_GB</option>
+            <option value="en_PI">MOD_ITPFBACTIVITY_EN_PI</option>
+            <option value="en_UD">MOD_ITPFBACTIVITY_EN_UD</option>
+            <option value="en_US">MOD_ITPFBACTIVITY_EN_US</option>
+            <option value="eo_EO">MOD_ITPFBACTIVITY_EO_EO</option>
+            <option value="es_CL">MOD_ITPFBACTIVITY_ES_CL</option>
+            <option value="es_CO">MOD_ITPFBACTIVITY_ES_CO</option>
+            <option value="es_ES">MOD_ITPFBACTIVITY_ES_ES</option>
+            <option value="es_LA">MOD_ITPFBACTIVITY_ES_LA</option>
+            <option value="es_MX">MOD_ITPFBACTIVITY_ES_MX</option>
+            <option value="es_VE">MOD_ITPFBACTIVITY_ES_MX</option>
+            <option value="et_EE">MOD_ITPFBACTIVITY_ET_EE</option>
+            <option value="eu_ES">MOD_ITPFBACTIVITY_EU_ES</option>
+            <option value="fa_IR">MOD_ITPFBACTIVITY_FA_IR</option>
+            <option value="fb_LT">MOD_ITPFBACTIVITY_FB_LT</option>
+            <option value="fi_FI">MOD_ITPFBACTIVITY_FI_FI</option>
+            <option value="fo_FO">MOD_ITPFBACTIVITY_FO_FO</option>
+            <option value="fr_CA">MOD_ITPFBACTIVITY_FR_CA</option>
+            <option value="fr_FR">MOD_ITPFBACTIVITY_FR_FR</option>
+            <option value="ga_IE">MOD_ITPFBACTIVITY_GA_IE</option>
+            <option value="gl_ES">MOD_ITPFBACTIVITY_GL_ES</option>
+            <option value="gn_PY">MOD_ITPFBACTIVITY_GN_PY</option>
+            <option value="gu_IN">MOD_ITPFBACTIVITY_GU_IN</option>
+            <option value="he_IL">MOD_ITPFBACTIVITY_HE_IL</option>
+            <option value="hi_IN">MOD_ITPFBACTIVITY_HI_IN</option>
+            <option value="hr_HR">MOD_ITPFBACTIVITY_HR_HR</option>
+            <option value="hu_HU">MOD_ITPFBACTIVITY_HU_HU</option>
+            <option value="hy_AM">MOD_ITPFBACTIVITY_HY_AM</option>
+            <option value="id_ID">MOD_ITPFBACTIVITY_ID_ID</option>
+            <option value="is_IS">MOD_ITPFBACTIVITY_IS_IS</option>
+            <option value="it_IT">MOD_ITPFBACTIVITY_IT_IT</option>
+            <option value="ja_JP">MOD_ITPFBACTIVITY_JA_JP</option>
+            <option value="jv_ID">MOD_ITPFBACTIVITY_JV_ID</option>
+            <option value="ka_GE">MOD_ITPFBACTIVITY_KA_GE</option>
+            <option value="kk_KZ">MOD_ITPFBACTIVITY_KK_KZ</option>
+            <option value="km_KH">MOD_ITPFBACTIVITY_KM_KH</option>
+            <option value="kn_IN">MOD_ITPFBACTIVITY_KN_IN</option>
+            <option value="ko_KR">MOD_ITPFBACTIVITY_KO_KR</option>
+            <option value="ku_TR">MOD_ITPFBACTIVITY_KU_TR</option>
+            <option value="la_VA">MOD_ITPFBACTIVITY_LA_VA</option>
+            <option value="li_NL">MOD_ITPFBACTIVITY_LI_NL</option>
+            <option value="lt_LT">MOD_ITPFBACTIVITY_LT_LT</option>
+            <option value="lv_LV">MOD_ITPFBACTIVITY_LV_LV</option>
+            <option value="mg_MG">MOD_ITPFBACTIVITY_MG_MG</option>
+            <option value="mk_MK">MOD_ITPFBACTIVITY_MK_MK</option>
+            <option value="ml_IN">MOD_ITPFBACTIVITY_ML_IN</option>
+            <option value="mn_MN">MOD_ITPFBACTIVITY_MN_MN</option>
+            <option value="mr_IN">MOD_ITPFBACTIVITY_MR_IN</option>
+            <option value="ms_MY">MOD_ITPFBACTIVITY_MS_MY</option>
+            <option value="mt_MT">MOD_ITPFBACTIVITY_MT_MT</option>
+            <option value="nb_NO">MOD_ITPFBACTIVITY_NB_NO</option>
+            <option value="ne_NP">MOD_ITPFBACTIVITY_NE_NP</option>
+            <option value="nl_BE">MOD_ITPFBACTIVITY_NL_BE</option>
+            <option value="nl_NL">MOD_ITPFBACTIVITY_NL_NL</option>
+            <option value="nn_NO">MOD_ITPFBACTIVITY_NN_NO</option>
+            <option value="pa_IN">MOD_ITPFBACTIVITY_PA_IN</option>
+            <option value="pl_PL">MOD_ITPFBACTIVITY_PL_PL</option>
+            <option value="ps_AF">MOD_ITPFBACTIVITY_PS_AF</option>
+            <option value="pt_BR">MOD_ITPFBACTIVITY_PT_BR</option>
+            <option value="pt_PT">MOD_ITPFBACTIVITY_PT_PT</option>
+            <option value="qu_PE">MOD_ITPFBACTIVITY_QU_PE</option>
+            <option value="rm_CH">MOD_ITPFBACTIVITY_RM_CH</option>
+            <option value="ro_RO">MOD_ITPFBACTIVITY_RO_RO</option>
+            <option value="ru_RU">MOD_ITPFBACTIVITY_RU_RU</option>
+            <option value="sa_IN">MOD_ITPFBACTIVITY_SA_IN</option>
+            <option value="se_NO">MOD_ITPFBACTIVITY_SE_NO</option>
+            <option value="sk_SK">MOD_ITPFBACTIVITY_SK_SK</option>
+            <option value="sl_SI">MOD_ITPFBACTIVITY_SL_SI</option>
+            <option value="so_SO">MOD_ITPFBACTIVITY_SO_SO</option>
+            <option value="sq_AL">MOD_ITPFBACTIVITY_SQ_AL</option>
+            <option value="sr_RS">MOD_ITPFBACTIVITY_SR_RS</option>
+            <option value="sv_SE">MOD_ITPFBACTIVITY_SV_SE</option>
+            <option value="sw_KE">MOD_ITPFBACTIVITY_SW_KE</option>
+            <option value="sy_SY">MOD_ITPFBACTIVITY_SY_SY</option>
+            <option value="ta_IN">MOD_ITPFBACTIVITY_TA_IN</option>
+            <option value="te_IN">MOD_ITPFBACTIVITY_TE_IN</option>
+            <option value="tg_TJ">MOD_ITPFBACTIVITY_TG_TJ</option>
+            <option value="th_TH">MOD_ITPFBACTIVITY_TH_TH</option>
+            <option value="tl_PH">MOD_ITPFBACTIVITY_TL_PH</option>
+            <option value="tl_ST">MOD_ITPFBACTIVITY_TL_ST</option>
+            <option value="tr_TR">MOD_ITPFBACTIVITY_TR_TR</option>
+            <option value="tt_RU">MOD_ITPFBACTIVITY_TT_RU</option>
+            <option value="uk_UA">MOD_ITPFBACTIVITY_UK_UA</option>
+            <option value="ur_PK">MOD_ITPFBACTIVITY_UR_PK</option>
+            <option value="uz_UZ">MOD_ITPFBACTIVITY_UZ_UZ</option>
+            <option value="vi_VN">MOD_ITPFBACTIVITY_VI_VN</option>
+            <option value="xh_ZA">MOD_ITPFBACTIVITY_XH_ZA</option>
+            <option value="yi_DE">MOD_ITPFBACTIVITY_YI_DE</option>
+            <option value="zh_CN">MOD_ITPFBACTIVITY_ZH_CN</option>
+            <option value="zh_HK">MOD_ITPFBACTIVITY_ZH_HK</option>
+            <option value="zh_TW">MOD_ITPFBACTIVITY_ZH_TW</option>
+            <option value="zu_ZA">MOD_ITPFBACTIVITY_ZU_ZA</option>
+        </param>
+	</params>
+
+    <params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" size="100" label="MODULE_CSS_SUFFIX" description="MODULE_CSS_SUFFIX_DESC" />
+        <param name="cache" type="list" default="0" label="CACHING" description="CACHING_DESC">
+            <option value="1">Use global</option>
+            <option value="0">No caching</option>
+        </param>
+        <param name="cache_time" type="text" default="900" label="CACHING_TIME" description="CACHING_TIME_DESC" />
+        <param name="fbLoadJsLib" type="radio" default="1" label="MOD_ITPFBACTIVITY_LOAD_JS_LIB" description="MOD_ITPFBACTIVITY_LOAD_JS_LIB_DESC">
+           <option value="0">JNO</option>
+           <option value="1">JYES</option>
+        </param>
+    </params>
+	
+	<languages>
+        <language tag="en-GB">en-GB.mod_itpfbactivityfeed.ini</language>
+    </languages>    
+</install>

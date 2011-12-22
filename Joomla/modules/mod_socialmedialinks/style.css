@@ -1,8 +1,23 @@
 @charset "utf-8";
 /* Social Media Icon Links Extension (S.M.I.L.E.) */
-div.smile a {display:inline-block;width:auto;outline:none;}
+.smile{
+    left: 50px;
+    position: relative;
+    text-align: center;
+}
+div.smile a {display:inline-block;width:auto;outline:none;  margin: 3px 20px;}
 div.smile a img {border:none;}
 div.smilecredits {width:100%}
 div.smilecredits a {font-size:10px;}
 .clr {clear:both;}
+.followus{
+    background-image: url("icons/row.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    left: 20px;
+    position: relative;
+    top: 35px;
+    width: 90px;
+}
 	

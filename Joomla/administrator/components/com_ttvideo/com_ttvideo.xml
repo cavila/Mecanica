@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">--> 
+<install type="component" version="1.5.0"> 
+            <name>TTVideo</name> 
+            <creationDate>December 2010</creationDate> 
+            <author>Martin Rose</author> 
+            <authorEmail>info(at)toughtomato.com</authorEmail> 
+            <authorUrl>http://www.toughtomato.com</authorUrl> 
+            <copyright>(C) 2010 ToughTomato. All rights reserved.</copyright>
+            <license>TTVideo is licensed under the GPL/GPU version 3 license (http://www.gnu.org/licenses/gpl.html)</license>       
+            <version>2.0.1</version> 
+            <description><![CDATA[
+                  <table>
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <img src="/administrator/components/com_ttvideo/images/ttvideo_48.png" alt="TTVideo" width="48" height="48" />
+                            </td>
+                            <td>
+                              <h2>TTVideo&#0153; 2.0.1</h2>
+                              <h3>Video Library Component</h3>
+                            </td>
+                          </tr>
+                        </table>
+                        For more information regarding TTVideo visit:<br />
+                        <a href="http://www.toughtomato.com/downloads/ttvideo/" target="_blank">http://www.toughtomato.com/downloads/ttvideo/</a><br />
+                        <br />
+                        <small>TTVideo brought to you by <a href="http://www.toughtomato.com" target="_blank">ToughTomato</a>&#0153;</small>
+                      </td>
+                      <td style="padding-left:50px;">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="2FV328M2JH62W">
+                        <input type="image" src="https://www.paypal.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online." style="border: 0px solid none;">
+                        <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                      </td>
+                    </tr>
+                  </table>
+            ]]></description> 
+            <install> 
+              <queries>	
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo`;
+                </query>
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo_settings`;
+                </query>
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo_ratings`;
+                </query>
+                <query>
+                    CREATE TABLE `#__ttvideo` (
+                     `id` int(11) NOT NULL auto_increment,
+                     `video_id` varchar(255) NOT NULL DEFAULT 0,
+                     `site` varchar(20) NOT NULL DEFAULT "",
+                     `thumbnail` varchar(255) NOT NULL DEFAULT "",
+                     `thumbnail_med` varchar(255) NOT NULL DEFAULT "",
+                     `thumbnail_lrg` varchar(255) NOT NULL DEFAULT "",
+                     `title` varchar(50) NOT NULL DEFAULT "",
+                     `author` varchar(50) NOT NULL DEFAULT "",
+                     `description` varchar(255) NOT NULL DEFAULT "",
+                     `full_description` text NOT NULL DEFAULT "",
+                     `c_date` DATETIME NOT NULL,
+                     `plays` int(11) NOT NULL DEFAULT 0,
+                     `likes` int(11) NOT NULL DEFAULT 0,
+                     `width` int(4) NOT NULL DEFAULT 600,
+                     `height` int(4) NOT NULL DEFAULT 300,
+                     `custom_settings` tinyint(1) NOT NULL DEFAULT 0,
+                     `published` tinyint(1) NOT NULL DEFAULT 0,
+                     `checked_out` tinyint(1) NOT NULL DEFAULT 0,
+                     `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+                      PRIMARY KEY  (`id`)
+                    );
+                </query>
+                <query>
+                    CREATE TABLE `#__ttvideo_settings` (
+                     `id` tinyint(1) NOT NULL DEFAULT 1,
+                     `table_width` varchar(5) NOT NULL,
+                     `show_search` tinyint(1) NOT NULL,
+                     `show_category_dropdown` tinyint(1) NOT NULL,
+                     `show_category` tinyint(1) NOT NULL,
+                     `show_plays` tinyint(1) NOT NULL,
+                     `show_likes` tinyint(1) NOT NULL,
+                     `show_author` tinyint(1) NOT NULL, 
+                     `show_date` tinyint(1) NOT NULL, 
+                     `show_rating` tinyint(1) NOT NULL,
+                     `ttvideo_header_colour` varchar(10) NOT NULL,
+                     `alt_colour_1` varchar(10) NOT NULL,
+                     `alt_colour_2` varchar(10) NOT NULL,
+                     `ttvideo_table_header_font_colour` varchar(10) NOT NULL,
+                     `ttvideo_table_font_colour` varchar(10) NOT NULL,
+                     `vimeo_font_colour` varchar(10) NOT NULL,
+                     `youtube_colour_1` varchar(10) NOT NULL,
+                     `youtube_colour_2` varchar(10) NOT NULL,
+                     `video_alignment` varchar(10) NOT NULL,
+                     `default_sort_column` varchar(15) NOT NULL,
+                     `sorting_order` varchar(4) NOT NULL,
+                     `default_display_num` tinyint(3) NOT NULL
+                    );
+                </query>
+                <query>
+                    CREATE TABLE `#__ttvideo_ratings` (
+                     `id` int(11) NOT NULL,
+                     `votes` int(11) NOT NULL DEFAULT 0,
+                     `sum` int(11) NOT NULL DEFAULT 0,
+                     `ips` text NOT NULL DEFAULT '',
+                     PRIMARY KEY  (`id`)
+                    );
+                </query>
+                <query>
+                    INSERT INTO `#__ttvideo_settings`
+                      (
+                        `table_width`, 
+                        `show_search`,
+                        `show_category_dropdown`,
+                        `show_category`,
+                        `show_plays`, 
+                        `show_likes`, 
+                        `show_author`, 
+                        `show_date`, 
+                        `show_rating`,
+                        `ttvideo_header_colour`, 
+                        `alt_colour_1`, 
+                        `alt_colour_2`, 
+                        `ttvideo_table_header_font_colour`, 
+                        `ttvideo_table_font_colour`,
+                        `vimeo_font_colour`, 
+                        `youtube_colour_1`, 
+                        `youtube_colour_2`, 
+                        `video_alignment`, 
+                        `default_sort_column`, 
+                        `sorting_order`, 
+                        `default_display_num`
+                      )
+                    VALUES 
+                      (
+                        "100%",
+                        1,
+                        1,
+                        1,
+                        1,
+                        1, 
+                        1,
+                        1, 
+                        1,
+                        "#FFFFFF", 
+                        "#FFFFFF", 
+                        "#FFFFFF", 
+                        "#000000", 
+                        "#000000", 
+                        "#00ADEF", 
+                        "#00ADEF", 
+                        "#00ADEF", 
+                        "center", 
+                        "c_date", 
+                        "DESC", 
+                        20
+                    );
+                </query>
+              </queries>
+            </install> 
+            <uninstall> 
+              <queries>		
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo`;
+                </query>
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo_settings`;
+                </query>
+                <query>
+                    DROP TABLE IF EXISTS `#__ttvideo_ratings`;
+                </query>
+                <query>
+                    DELETE FROM `#__categories` WHERE `section`="com_ttvideo";
+                </query>
+              </queries>
+            </uninstall>
+            <installfile>install.php</installfile> 
+            <uninstallfile>uninstall.php</uninstallfile>
+            <files folder="site"> 
+                        <filename>index.html</filename>
+                        <filename>ttvideoController.php</filename>
+                        <filename>ttvideo.php</filename>
+                        <filename>router.php</filename>
+                        <filename>helpers/index.html</filename>
+                        <filename>helpers/rating.php</filename>
+                        <filename>images/index.html</filename>
+                        <filename>images/crystal-arrows.gif</filename>
+                        <filename>images/crystal-stars.png</filename>
+                        <filename>images/blank-stars.png</filename>
+                        <filename>images/stars.png</filename>
+                        <filename>images/no-image-icon.jpg</filename>
+                        <filename>lib/index.html</filename>
+                        <filename>lib/css/index.html</filename>
+                        <filename>lib/css/jquery.crystal.stars.css</filename>
+                        <filename>lib/css/jquery.ui.stars.css</filename>
+                        <filename>lib/js/index.html</filename>
+                        <filename>lib/js/jquery.min.js</filename>
+                        <filename>lib/js/jquery.ui.stars.min.js</filename>
+                        <filename>lib/js/jquery-ui.custom.min.js</filename>
+                        <filename>lib/js/noconflict.js</filename>
+                        <filename>models/index.html</filename>
+                        <filename>models/ttvideo.php</filename>
+                        <filename>views/index.html</filename>
+                        <filename>views/categories/index.html</filename>
+                        <filename>views/categories/view.html.php</filename>
+                        <filename>views/categories/tmpl/index.html</filename>
+                        <filename>views/categories/tmpl/default.php</filename>
+                        <filename>views/categories/tmpl/default.xml</filename>
+                        <filename>views/video/index.html</filename>
+                        <filename>views/video/view.html.php</filename>
+                        <filename>views/video/metadata.xml</filename>
+                        <filename>views/video/tmpl/index.html</filename>
+                        <filename>views/video/tmpl/default.php</filename>
+                        <filename>views/videolist/index.html</filename>
+                        <filename>views/videolist/view.html.php</filename>
+                        <filename>views/videolist/metadata.xml</filename>
+                        <filename>views/videolist/tmpl/index.html</filename>
+                        <filename>views/videolist/tmpl/default.php</filename>
+                        <filename>views/videolist/tmpl/default.xml</filename>
+            </files>
+            <administration> 
+                        <menu img="components/com_ttvideo/images/ttvideo_16.png">TTVideo</menu>                
+                        <submenu> 
+                                   <menu link="option=com_ttvideo">Videos</menu> 
+                                   <menu link="option=com_categories&amp;section=com_ttvideo">Categories</menu>
+                                   <menu link="option=com_ttvideo&amp;task=settings">Settings</menu> 
+                        </submenu> 
+                        <files folder="admin"> 
+                                  <filename>index.html</filename>
+                                  <filename>ttvideoController.php</filename>
+                                  <filename>admin.ttvideo.php</filename>
+                                  <filename>install.php</filename>
+                                  <filename>uninstall.php</filename>
+                                  <filename>css/index.html</filename>
+                                  <filename>css/ttvideo.css</filename>
+                                  <filename>elements/index.html</filename>
+                                  <filename>elements/ttvideo.php</filename>
+                                  <filename>images/index.html</filename>
+                                  <filename>images/icon-32-export.png</filename>
+                                  <filename>images/icon-32-import.png</filename>
+                                  <filename>images/icon-32-update.png</filename>
+                                  <filename>images/ttvideo_16.png</filename>
+                                  <filename>images/ttvideo_32.png</filename>
+                                  <filename>images/ttvideo_48.png</filename>
+                                  <filename>models/index.html</filename>
+                                  <filename>models/export.php</filename>
+                                  <filename>models/import.php</filename>
+                                  <filename>models/settings.php</filename>
+                                  <filename>models/ttvideo.php</filename>
+                                  <filename>tables/index.html</filename>
+                                  <filename>tables/settings.php</filename>
+                                  <filename>tables/ttvideo.php</filename>
+                                  <filename>views/index.html</filename>
+                                  <filename>views/import/index.html</filename>
+                                  <filename>views/import/view.php</filename>
+                                  <filename>views/import/tmpl/index.html</filename>
+                                  <filename>views/import/tmpl/default.php</filename>
+                                  <filename>views/list/index.html</filename>
+                                  <filename>views/list/view.php</filename>
+                                  <filename>views/list/tmpl/index.html</filename>
+                                  <filename>views/list/tmpl/listlayout.php</filename>
+                                  <filename>views/settings/index.html</filename>
+                                  <filename>views/settings/view.php</filename>
+                                  <filename>views/settings/tmpl/index.html</filename>
+                                  <filename>views/settings/tmpl/settingslayout.php</filename>
+                                  <filename>views/videoform/index.html</filename>
+                                  <filename>views/videoform/view.php</filename>
+                                  <filename>views/videoform/tmpl/index.html</filename>
+                                  <filename>views/videoform/tmpl/videoformlayout.php</filename>
+                        </files> 
+            </administration>
+</install>

@@ -59,9 +59,11 @@ $url = array(
     $vurl = array();
 	
 // Set Wrapping Div
+echo '<div class="followus">Siguenos en</div>';
 	echo '<div class="smile" style="'. $alignstyle .'"> ';
 	
 // Prepare the Icon List
+
 	for($i=0;$i < count($ic);$i++)
      {   
      $vimg[$ic[$i]]= htmlspecialchars($url[$i]);
@@ -70,13 +72,13 @@ $url = array(
 	 
 // Output the Icon Links	
 	 	 if(($vimg[$ic[$i]]) != '') {
-		 	
+			
 			echo '<a style="margin:'.$margin.';" '. $nofollow .' href="'. $vimg[$ic[$i]]. '" target="'. $target .'"><img src="'. $mod .'icons/'. $theme .'/'. $size .'/'. $vurl[$url[$i]] .' " alt="'. $title .'" '; if($title == 'Feed') { echo 'title="'. $rsstext .'" /></a>';}else{ echo 'title="'. $text .' '. $title .'" /></a>';}
 		 }
 	 } 
 
 			if($credits == '1') :
-				echo '<div class="smilecredits" style="text-align:'. $alignstyle .';margin: 0px '.$margin.' 0px '.$margin.';"><a href="http://www.viperwebsites.com/" title="Social Media Icons for Joomla!">Social Media Icons for Joomla!</a></div>';
+			//	echo '<div class="smilecredits" style="text-align:'. $alignstyle .';margin: 0px '.$margin.' 0px '.$margin.';"><a href="http://www.viperwebsites.com/" title="Social Media Icons for Joomla!">Social Media Icons for Joomla!</a></div>';
 			endif;
 		?>
 	</div>

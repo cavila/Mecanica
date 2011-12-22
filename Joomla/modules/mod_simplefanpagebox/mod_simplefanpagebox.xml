@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+  <name>Simple FanpageBox</name>
+  <author>George Goger</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) http://www.greek8.com/ All rights reserved.</copyright>
+	<authorEmail>info@greek8.com</authorEmail>
+	<authorUrl>www.greek8.com</authorUrl>
+  <version>1.5.x.x</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description><![CDATA[Simple FanpageBox INSTALLATION Success]]></description>
+  <files>
+      <filename module="mod_simplefanpagebox">mod_simplefanpagebox.php</filename>
+      <filename>mod_simplefanpagebox.xml</filename>
+      <filename>index.html</filename>
+      <filename>helper.php</filename>
+      <folder>tmpl</folder>
+	 
+  </files>
+
+  <params addpath="/modules/mod_simplefanpagebox/proc">
+  		<param name="@spacer" type="spacer" default="___________________________________________________BASIC CONFIGURATION___________________________________________________" label="Basic" description="Basic" />
+		<param name="script_call" type="list" default="1" label="Enable Connect Script" description="Enable Connect Script">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+		<param name="api_key" type="text" default="" label="Api Key" description="FB Application Api Key" />
+		<param name="profile_id" type="text" default="" label="Page Id" description="Page Id Of You Fcebook Page" />
+				<param name="@spacer" type="spacer" default="______________________________________________________BASIC STYLING______________________________________________________" label="" description="" />
+		<param name="include_stream" type="list" default="1" label="Include Stream" description="Include or not the stream of latest posts from your Facebook Page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="boxwidth" type="text" default="300" label="Width" description="Width" />
+		<param name="boxheight" type="text" default="550" label="Height" description="Height" />
+				<param name="number_of_fans" type="list" default="10" label="Number of Fans" description="Number of Fans to display">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="55">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			<option value="60">60</option>
+			<option value="61">61</option>
+			<option value="62">62</option>
+			<option value="63">63</option>
+			<option value="64">64</option>
+			<option value="65">65</option>
+			<option value="66">66</option>
+			<option value="67">67</option>
+			<option value="68">68</option>
+			<option value="69">69</option>
+			<option value="70">70</option>
+			<option value="71">71</option>
+			<option value="72">72</option>
+			<option value="73">73</option>
+			<option value="74">74</option>
+			<option value="75">75</option>
+			<option value="76">76</option>
+			<option value="77">77</option>
+			<option value="78">78</option>
+			<option value="79">79</option>
+			<option value="80">80</option>
+			<option value="81">81</option>
+			<option value="82">82</option>
+			<option value="83">83</option>
+			<option value="84">84</option>
+			<option value="85">85</option>
+			<option value="86">86</option>
+			<option value="87">87</option>
+			<option value="88">88</option>
+			<option value="89">89</option>
+			<option value="80">80</option>
+			<option value="90">90</option>
+			<option value="91">91</option>
+			<option value="92">92</option>
+			<option value="93">93</option>
+			<option value="94">94</option>
+			<option value="95">95</option>
+			<option value="96">96</option>
+			<option value="97">97</option>
+			<option value="98">98</option>
+			<option value="99">99</option>
+			<option value="100">100</option>
+			<option value="150">150</option>
+			<option value="200">200</option>
+			<option value="500">500</option>
+		</param>
+
+		<param name="rendering_mode" type="list" default="1" label="Rendering Mode" description="Rendering Mode Faster is XFBML tested">
+			<option value="0">XFBML</option>	
+            <option value="1">IFrame</option>			
+		</param>
+		
+		<param name="@spacer" type="spacer" default="___________________________________________________LANGUAGE SELECTION___________________________________________________" label="" description="" />
+		
+		<param name="locale" type="list" default="default" label="Language" description="Language Selection">
+			<option value="default">Auto</option>
+			<option value="af_ZA">Afrikaans</option>
+			<option value="sq_AL">Albanian</option>
+			<option value="ar_AR">Arabic</option>
+			<option value="hy_AM">Armenian</option>
+			<option value="ay_BO">Aymara</option>
+			<option value="az_AZ">Azeri</option>
+			<option value="eu_ES">Basque</option>
+			<option value="be_BY">Belarusian</option>
+			<option value="bn_IN">Bengali</option>
+			<option value="bs_BA">Bosnian</option>
+			<option value="bg_BG">Bulgarian</option>
+			<option value="ca_ES">Catalan</option>
+			<option value="ck_US">Cherokee</option>
+			<option value="hr_HR">Croatian</option>
+			<option value="cs_CZ">Czech</option>
+			<option value="da_DK">Danish</option>
+			<option value="nl_NL">Dutch</option>
+			<option value="nl_BE">Dutch (België)</option>
+			<option value="en_PI">English (Pirate)</option>
+			<option value="en_GB">English (UK)</option>
+			<option value="en_UD">English (Upside Down)</option>
+			<option value="en_US">English (US)</option>
+			<option value="eo_EO">Esperanto</option>
+			<option value="et_EE">Estonian</option>
+			<option value="fo_FO">Faroese</option>
+			<option value="tl_PH">Filipino</option>
+			<option value="fi_FI">Finnish</option>
+			<option value="fb_FI">Finnish (test)</option>
+			<option value="fr_CA">French (Canada)</option>
+			<option value="fr_FR">French (France)</option>
+			<option value="gl_ES">Galician</option>
+			<option value="ka_GE">Georgian</option>
+			<option value="de_DE">German</option>
+			<option value="el_GR">Greek</option>
+			<option value="gn_PY">Guaraní</option>
+			<option value="gu_IN">Gujarati</option>
+			<option value="he_IL">Hebrew</option>
+			<option value="hi_IN">Hindi</option>
+			<option value="hu_HU">Hungarian</option>
+			<option value="is_IS">Icelandic</option>
+			<option value="id_ID">Indonesian</option>
+			<option value="ga_IE">Irish</option>
+			<option value="it_IT">Italian</option>
+			<option value="ja_JP">Japanese</option>
+			<option value="jv_ID">Javanese</option>
+			<option value="kn_IN">Kannada</option>
+			<option value="kk_KZ">Kazakh</option>
+			<option value="km_KH">Khmer</option>
+			<option value="tl_ST">Klingon</option>
+			<option value="ko_KR">Korean</option>
+			<option value="ku_TR">Kurdish</option>
+			<option value="la_VA">Latin</option>
+			<option value="lv_LV">Latvian</option>
+			<option value="fb_LT">Leet Speak</option>
+			<option value="li_NL">Limburgish</option>
+			<option value="lt_LT">Lithuanian</option>
+			<option value="mk_MK">Macedonian</option>
+			<option value="mg_MG">Malagasy</option>
+			<option value="ms_MY">Malay</option>
+			<option value="ml_IN">Malayalam</option>
+			<option value="mt_MT">Maltese</option>
+			<option value="mr_IN">Marathi</option>
+			<option value="mn_MN">Mongolian</option>
+			<option value="ne_NP">Nepali</option>
+			<option value="se_NO">Northern Sámi</option>
+			<option value="nb_NO">Norwegian (bokmal)</option>
+			<option value="nn_NO">Norwegian (nynorsk)</option>
+			<option value="ps_AF">Pashto</option>
+			<option value="fa_IR">Persian</option>
+			<option value="pl_PL">Polish</option>
+			<option value="pt_BR">Portuguese (Brazil)</option>
+			<option value="pt_PT">Portuguese (Portugal)</option>
+			<option value="pa_IN">Punjabi</option>
+			<option value="qu_PE">Quechua</option>
+			<option value="ro_RO">Romanian</option>
+			<option value="rm_CH">Romansh</option>
+			<option value="ru_RU">Russian</option>
+			<option value="sa_IN">Sanskrit</option>
+			<option value="sr_RS">Serbian</option>
+			<option value="zh_CN">Simplified Chinese (China)</option>
+			<option value="sk_SK">Slovak</option>
+			<option value="sl_SI">Slovenian</option>
+			<option value="so_SO">Somali</option>
+			<option value="es_LA">Spanish</option>
+			<option value="es_CL">Spanish (Chile)</option>
+			<option value="es_CO">Spanish (Colombia)</option>
+			<option value="es_MX">Spanish (Mexico)</option>
+			<option value="es_ES">Spanish (Spain)</option>
+			<option value="es_VE">Spanish (Venezuela)</option>
+			<option value="sw_KE">Swahili</option>
+			<option value="sv_SE">Swedish</option>
+			<option value="sy_SY">Syriac</option>
+			<option value="tg_TJ">Tajik</option>
+			<option value="ta_IN">Tamil</option>
+			<option value="tt_RU">Tatar</option>
+			<option value="te_IN">Telugu</option>
+			<option value="th_TH">Thai</option>
+			<option value="zh_HK">Traditional Chinese (Hong Kong)</option>
+			<option value="zh_TW">Traditional Chinese (Taiwan)</option>
+			<option value="tr_TR">Turkish</option>
+			<option value="uk_UA">Ukrainian</option>
+			<option value="ur_PK">Urdu</option>
+			<option value="uz_UZ">Uzbek</option>
+			<option value="vi_VN">Vietnamese</option>
+			<option value="cy_GB">Welsh</option>
+			<option value="xh_ZA">Xhosa</option>
+			<option value="yi_DE">Yiddish</option>
+			<option value="zu_ZA">Zulu</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="________________________________________________LINK ON BOTTOM OF THE BOX________________________________________________" label="" description="" />
+		<param name="link_to_page" type="list" default="0" label="Link to Page" description="Show link to Page on Facebook">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="profile_name" type="text" default="Page Name" label="Page name" description="Page name to show as Link" />
+		<param name="link" type="textarea" rows="1" cols="40" default="http://www.facebook.com/pages/" label="Link" description="Link to open" />
+		<param name="target" type="list" default="1" label="Target" description="Trget Link to open">
+			<option value="0">Parent Window</option>
+			<option value="1">New Window</option>
+		</param>
+		<param name="text_after_link" type="text" rows="1" cols="40" default="on Facebook" label="Text after name" description="Text after your pages name" />
+		<param name="Link_Style" type="textarea" rows="1" cols="40" default="font-size: 11px; padding-left: 11px;" label="Link Style" description="Link Style" />
+	</params>
+	
+	<params group="advanced" addpath="/modules/mod_simplefanpagebox/proc">
+	 <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix for the CSS class of the module." />
+		<param name="unique_id" type="text" default="" label="Unique ID" description="Unique ID for this module." />
+		<param name="debug" type="list" default="0" label="Debug" description="Turn debug function on.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="cache" type="list" default="1" label="Caching" description="Selection of cache of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="Time before the module is recached" />
+	</params>
+</install>

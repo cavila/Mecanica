@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+* @package TTVideo
+* @author Martin Rose
+* @website www.toughtomato.com
+* @version 2.0.1
+* @copyright Copyright (C) 2010 Open Source Matters. All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+*/
+-->
+<metadata>
+	<layout title="Video Categories Layout">
+		<message>
+			<![CDATA[This layout shows your list of video categories.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Video Categories Layout</name>
+		<description>This layout shows your list of video categories.</description>
+		<params>
+		</params>
+	</state>
+</metadata>

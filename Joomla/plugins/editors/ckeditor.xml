@@ -1,0 +1,19 @@
+<install version="3.6.2" type="plugin" group="editors" method="upgrade">
+	<name>Editor - CKEditor</name>
+	<version>3.6.2</version>
+	<creationDate>2011-09-30</creationDate>
+	<author>CKSource</author>
+	<authorurl>http://cksource.com</authorurl>
+	<license>Licensed under CKEditor for Joomla License Agreement, version 1.0. For licensing, see http://ckeditor.com/ckeditor-for-joomla/license</license>
+	<description>CKEDITOR_PLUGIN_DESCRIPTION</description>
+	<files>
+		<filename plugin="ckeditor">ckeditor.php</filename>
+		<folder>ckeditor</folder>
+	</files>
+	<params>
+		<param type="spacer" default="EDITOR PARAMS DESC"></param>
+	</params>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_editors_ckeditor.ini</language>
+	</languages>
+</install>

@@ -1,0 +1,12 @@
+/**
+* @package TTVideo
+* @author Martin Rose
+* @website www.toughtomato.com
+* @version 2.0.1
+* @copyright Copyright (C) 2010 Open Source Matters. All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+*/
+.icon-48-ttvideo { background-image: url(../images/ttvideo_48.png); no-repeat; }
+.icon-32-export  { background-image: url(../images/icon-32-export.png); no-repeat; }
+.icon-32-import  { background-image: url(../images/icon-32-import.png); no-repeat; }
+.icon-32-update  { background-image: url(../images/icon-32-update.png); no-repeat; }
