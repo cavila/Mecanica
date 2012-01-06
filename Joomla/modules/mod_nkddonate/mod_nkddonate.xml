@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>MoneyBooker/Paypal Donations</name>
+	<author>NkdWeb</author>
+	<authorUrl>www.nkdweb.com</authorUrl> 
+	<creationDate>09 Dec 2009</creationDate>
+	<copyright>NkdWeb</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@nkdweb.com</authorEmail>
+	<version>1.0</version>
+	<description>Collect donations on your website using moneybookers. Contains field for the amount and a currency drop-down list</description>
+	<files>
+		<filename module="mod_nkddonate">mod_nkddonate.php</filename>
+		<filename module="mod_nkddonate">index.html</filename>
+		<filename module="mod_nkddonate">mb.gif</filename>
+		<filename module="mod_nkddonate">paypal_donate.gif</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		
+		<param type="spacer" default="Money Booker Paramaters" />
+		
+		<param name="mb_email" type="text" size="35" label="Moneybookers Email" description="Your Moneybookers email account" />
+		<param name="mb_amount" type="text" size="35" label="Donation Amount" description="Enter donation amount" />
+		
+		<param type="spacer" default="Paypal Paramters" />
+		<param name="paypal_account" type="text" size="50" default="" label="Paypal Account" description="Enter your Paypal account email id" />
+		<param name="amount" type="text" size="50" default="" label="Donation Amount" description="Enter donation amount." />
+		<param name="currency_code" type="list" default="USD" label="Currency" description="Donation currency. PayPal lets you send and receive money, without opening a currency balance, in these currencies">
+			<option value="USD">U.S. Dollars</option>
+			<option value="AUD">Australian Dollars</option>
+			<option value="GBP">British Pounds</option>
+			<option value="CAD">Canadian Dollars</option>
+			<option value="CZK">Czech Koruna</option>
+			<option value="DKK">Danish Kroner</option>
+			<option value="EUR">Euros</option>
+			<option value="HKD">Hong Kong Dollars</option>
+			<option value="HUF">Hungarian Forint</option>
+			<option value="ILS">Israeli New Shekels</option>
+			<option value="JPY">Japanese Yen</option>
+			<option value="MXN">Mexican Pesos</option>
+			<option value="NZD">New Zealand Dollars</option>
+			<option value="NOK">Norwegian Kroner</option>
+			<option value="PLN">Polish Zlotych</option>
+			<option value="SGD">Singapore Dollars</option>
+			<option value="SEK">Swedish Kronor</option>
+			<option value="CHF">Swiss Francs</option>
+		</param>	
+		<param name="successeful_url" type="text" size="100" default="" label="Successful Payment URL" description="Successful Payment URL - Redirection after completing the donation. (e.g. www.ursite.com)"/>		
+		<param name="cancel_url" type="text" size="100" default="" label="Cancel Payment URL" description="Cancel Payment URL - Redirection if they cancel their donation. (e.g. www.ursite.com/reject)"/>		
+	</params>
+</install>
+

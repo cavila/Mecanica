@@ -103,10 +103,6 @@ All Rights Reserved.</p>
 		<div class="cleared"></div>
     </div>
 </div>
-<div class="cleared"></div>
-<p class="art-page-footer"><a href="http://www.artisteer.com/?p=joomla_templates">Joomla template</a> created with Artisteer.</p>
-</div>
-
 </body>
  <script type="text/javascript">
 	var alturaDiv1 = $("div.art-content").height();
